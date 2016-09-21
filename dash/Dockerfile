@@ -16,4 +16,4 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 RUN git clone https://github.com/Gospely/dash /var/www/dash
 RUN cd /var/www/dash && cnpm install && cnpm rebuild node-sass
 
-ENTRYPOINT cd /var/www/dash && npm run dev  && /bin/bash
+ENTRYPOINT cd /var/www/dash && git pull && npm run dev && /bin/bash
