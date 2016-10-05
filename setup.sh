@@ -1,5 +1,5 @@
 #install docker
-sudo yum update
+sudo yum update -y
 
 sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
 [dockerrepo]
@@ -13,6 +13,8 @@ EOF
 sudo yum install docker-engine -y
 sudo systemctl enable docker.service
 sudo systemctl start docker
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy 
+sudo systemctl restart docker
 
 #install nginx
 sudo yum install nginx -y
@@ -20,3 +22,15 @@ service nginx start
 
 #install git
 sudo yum install git -y
+
+#clone index
+git clone https://github.com/Gospely/index /var/www/gospely/index
+
+#config nginx
+#modify the default workspace of nginx
+sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
+
+service nginx restart
+
+git clone https://github.com/Gospely/deploy ~/gospely/deploy
+
