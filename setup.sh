@@ -32,13 +32,13 @@ sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 
 service nginx restart
 
-#git clone https://github.com/Gospely/deploy ~/gospely/deploy
+git clone https://github.com/Gospely/deploy ~/gospely/deploy
 
 docker pull nginx
 docker pull node
 
 #依次构建
-sh ./admin/deploy.sh
-sh ./api/deploy.sh
-sh ./dash/deploy.sh
+sh ~/gospely/deploy/admin/deploy.sh
+sh ~/gospely/deploy/api/deploy.sh
+sh ~/gospely/deploy/dash/deploy.sh
 
