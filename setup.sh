@@ -34,6 +34,9 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 #clone index
 git clone https://github.com/Gospely/index /var/www/gospely/index
 
+#clone socket
+git clone https://github.com/Gospely/terminal-socket ./socket
+
 #config nginx
 #modify the default workspace of nginx
 sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
