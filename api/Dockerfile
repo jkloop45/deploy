@@ -13,4 +13,4 @@ RUN git clone https://github.com/Gospely/api /var/www/api
 RUN cd /var/www/api && cnpm install
 RUN cnpm install -g supervisor
 
-ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor index.js && /bin/bash
+ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash
