@@ -1,4 +1,4 @@
-FROM node
+FROM node:4
 
 MAINTAINER ivy 'xieyang@dodora.cn'
 
