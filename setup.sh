@@ -49,6 +49,12 @@ git clone https://github.com/Gospely/deploy ~/gospely/deploy
 docker pull nginx
 docker pull node
 
+#创建存储文件夹
+
+mkdir /var/www/storage
+mkdir /var/www/storage/codes
+mkdir /var/www/storage/profiles
+
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
 sh ~/gospely/deploy/api/deploy.sh
