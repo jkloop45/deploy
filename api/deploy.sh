@@ -1,3 +1,5 @@
-docker stop gospel_api && docker rm gospel_api
-docker build -t gospel_api .
-docker run -itd -p 9999:8089 -v /var/www/storage:/var/www/storage -w /var/www/api --name="gospel_api" --link gospel-redis:redis  gospel_api
+docker stop gospel_test && docker rm gospel_test
+docker build -t gospel_test .
+docker run -itd -p 9999:8089 -w /var/www/api -v /var/www/ssh:/var/temp  --name="gospel_test" --link gospel-redis:redis  gospel_test
+
+cat /var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
