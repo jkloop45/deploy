@@ -4,6 +4,7 @@ MAINTAINER ivy 'xieyang@dodora.cn'
 
 RUN apt-get update
 RUN apt-get install git -y
+RUN apt-get install openssh-server -y
 
 #use cnpm
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
@@ -12,6 +13,6 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 RUN git clone https://github.com/Gospely/api /var/www/api
 RUN cd /var/www/api && cnpm install
 RUN cnpm install -g supervisor
-RUN echo '/n'
+RUN ssh-keygen -t rsa -P "" -f /var/temp/id_rsa.pub
 
-ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && ssh keygen -t rsa -f /var/temp
+ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start &&
