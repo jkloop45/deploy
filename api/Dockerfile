@@ -13,6 +13,6 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 RUN git clone https://github.com/Gospely/api /var/www/api
 RUN cd /var/www/api && cnpm install
 RUN cnpm install -g supervisor
-RUN ssh-keygen -t rsa -P "" -f /var/temp/id_rsa.pub
+RUN ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 
-ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start &&
+ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start
