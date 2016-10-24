@@ -10,10 +10,10 @@ RUN apt-get install git -y
 #RUN export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 #use cnpm
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+#RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 #clone code
 RUN git clone https://github.com/Gospely/ide /var/www/ide
-RUN cd /var/www/ide && cnpm install
+RUN cd /var/www/ide && npm install
 
 ENTRYPOINT cd /var/www/ide && git pull && npm run dev && /bin/bash
