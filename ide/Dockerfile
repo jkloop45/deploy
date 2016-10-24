@@ -14,6 +14,6 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 #clone code
 RUN git clone https://github.com/Gospely/ide /var/www/ide
-RUN cd /var/www/ide && cnpm install && cnpm rebuild node-sass
+RUN cd /var/www/ide && cnpm install
 
 ENTRYPOINT cd /var/www/ide && git pull && npm run dev && /bin/bash
