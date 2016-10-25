@@ -10,6 +10,12 @@ gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 EOF
 
+#配置docker rest api
+sudo tee /etc/systemd/system/docker.service <<- 'EOF'
+[Service]
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+EOF
+
 sudo yum install docker-engine -y
 sudo systemctl enable docker.service
 sudo systemctl start docker
