@@ -38,7 +38,7 @@ container.id = containerInfo[0].Id;
 var GraphDriver = containerInfo[0].GraphDriver.Data;
 container.device = GraphDriver;
 
-var sectorInfoBash = 'dmsetup tabel ' + container.device.DeviceName;
+var sectorInfoBash = 'dmsetup table ' + container.device.DeviceName;
 var sectorInfo = exec(sectorInfoBash);
 
 console.log(sectorInfo, sectorInfoBash);
