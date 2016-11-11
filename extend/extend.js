@@ -41,7 +41,7 @@ container.device = GraphDriver;
 var sectorInfoBash = 'dmsetup table ' + container.device.DeviceName;
 var sectorInfo = exec(sectorInfoBash);
 
-console.log(sectorInfo, typeof sectorInfo);
+console.log(sectorInfo.stdout, typeof sectorInfo);
 
 // var extendBash = 'echo 0 41943040 thin 252:0 9 | dmsetup load ' + container.device.DeviceName;
 
