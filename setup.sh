@@ -65,6 +65,9 @@ mkdir /var/www/storage
 mkdir /var/www/storage/codes
 mkdir /var/www/storage/profiles
 
+#设置脚本运行权限
+chmod 777 /root/gospely/deploy/shell
+
 #创建phpmyadmin
 docker run --name myadmin -d -e PMA_ARBITRARY=1 -p 8081:80 phpmyadmin/phpmyadmin
 
