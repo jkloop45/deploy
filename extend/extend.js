@@ -41,12 +41,12 @@ container.device = GraphDriver;
 var sectorInfoBash = 'dmsetup tabel ' + container.device.DeviceName;
 var sectorInfo = exec(sectorInfoBash);
 
-console.log(sectorInfo);
+console.log(sectorInfo, sectorInfoBash);
 
 // var extendBash = 'echo 0 41943040 thin 252:0 9 | dmsetup load ' + container.device.DeviceName;
 
-if(result.code !== 0) {
-   console.error(result);
-}else {
-   console.log('extend success');
-}
+// if(result.code !== 0) {
+//    console.error(result);
+// }else {
+//    console.log('extend success');
+// }
