@@ -30,12 +30,17 @@ containerInfo = JSON.parse(containerInfo);
 
 var container = {
   id: '',
-  device: ''
+  device: {}
 }
 
 console.log(containerInfo[0]);
 
 container.id = containerInfo[0].Id;
+
+var GraphDriver = containerInfo[0].GraphDriver.Data;
+container.device = GraphDriver;
+
+console.log(container);
 
 if(result.code !== 0) {
    console.error(result);
