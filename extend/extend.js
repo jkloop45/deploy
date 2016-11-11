@@ -23,10 +23,17 @@ var argv = require('yargs')
 var containerName = argv.c,
     size = argv.s;
 
-var runBash = 'docker inspect ' + containerName;
-var result = exec(runBash);
+var containerInfoBash = 'docker inspect ' + containerName;
+var containerInfo = exec(runBash);
 
-console.log(JSON.parse(result));
+containerInfo = JSON.parse(containerInfo);
+
+var container = {
+  id: '',
+  device: ''
+}
+
+console.log(containerInfo[0]);
 
 if(result.code !== 0) {
    console.error(result);
