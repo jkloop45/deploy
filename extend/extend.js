@@ -44,7 +44,7 @@ var sectorInfo = exec(sectorInfoBash);
 sectorInfo = sectorInfo.stdout;
 
 var sectorSize = sectorInfo.split(' ');
-console.loh(sectorSize);
+console.log(sectorSize);
 sectorSize = sectorSize[1];
 
 sectorInfo = sectorSize.replace(sectorSize, size);
