@@ -47,7 +47,7 @@ var sectorSize = sectorInfo.split(' ');
 sectorSize = sectorSize[1];
 
 sectorInfo = sectorInfo.replace(sectorSize, size);
-
+//
 var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName + ' && dmsetup resume ' + container.device.DeviceName + ' && xfs_growfs /dev/mapper/' + container.device.DeviceName;
 
 var extend = exec(extendBash);
