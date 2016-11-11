@@ -26,7 +26,7 @@ var containerName = argv.c,
 var runBash = 'docker inspect ' + containerName;
 var result = exec(runBash);
 
-console.log(result);
+console.log(JSON.parse(result));
 
 if(result.code !== 0) {
    console.error(result);
