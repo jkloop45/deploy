@@ -51,12 +51,10 @@ sectorInfo = sectorInfo.replace(sectorSize, size).replace(/\r\n/g, '').replace(/
 //
 var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName + ' && dmsetup resume ' + container.device.DeviceName + ' && xfs_growfs /dev/mapper/' + container.device.DeviceName;
 
-console.log(extendBash);
+var extendingReslt = exec(extendBash);
 
-var extend = exec(extendBash);
-
-// if(result.code !== 0) {
-//    console.error(result);
-// }else {
-//    console.log('extend success');
-// }
+if(extendingReslt.code !== 0) {
+   console.error(result);
+}else {
+   console.log('extend success');
+}
