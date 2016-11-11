@@ -33,14 +33,17 @@ var container = {
   device: {}
 }
 
-console.log(containerInfo[0]);
-
 container.id = containerInfo[0].Id;
 
 var GraphDriver = containerInfo[0].GraphDriver.Data;
 container.device = GraphDriver;
 
-console.log(container);
+var sectorInfoBash = 'dmsetup tabel ' + container.device.DeviceName;
+var sectorInfo = exec(sectorInfoBash);
+
+console.log(sectorInfo);
+
+// var extendBash = 'echo 0 41943040 thin 252:0 9 | dmsetup load ' + container.device.DeviceName;
 
 if(result.code !== 0) {
    console.error(result);
