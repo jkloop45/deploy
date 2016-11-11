@@ -24,7 +24,7 @@ var containerName = argv.c,
     size = argv.s;
 
 var containerInfoBash = 'docker inspect ' + containerName;
-var containerInfo = exec(runBash);
+var containerInfo = exec(containerInfoBash);
 
 containerInfo = JSON.parse(containerInfo);
 
@@ -34,6 +34,8 @@ var container = {
 }
 
 console.log(containerInfo[0]);
+
+container.id = containerInfo[0].Id;
 
 if(result.code !== 0) {
    console.error(result);
