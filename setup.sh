@@ -19,7 +19,7 @@ EOF
 sudo yum install docker-engine -y
 sudo systemctl enable docker.service
 sudo systemctl start docker
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy 
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy
 sudo systemctl restart docker
 
 #install nginx
@@ -54,6 +54,7 @@ git clone https://github.com/Gospely/deploy ~/gospely/deploy
 
 docker pull nginx
 docker pull node
+docker phpmyadmin/phpmyadmin
 
 #创建存储文件夹
 
@@ -61,8 +62,11 @@ mkdir /var/www/storage
 mkdir /var/www/storage/codes
 mkdir /var/www/storage/profiles
 
+#创建phpmyadmin
+docker run --name myadmin -d -e PMA_ARBITRARY=1 -p 8081:80 phpmyadmin/phpmyadmin
+
+
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
 sh ~/gospely/deploy/api/deploy.sh
 sh ~/gospely/deploy/dash/deploy.sh
-
