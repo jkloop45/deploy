@@ -10,7 +10,7 @@ var argv = require('yargs')
   })
   .option('s', {
     alias : 'size',
-    demand: false,
+    demand: true,
     describe: 'device size',
   })
   .usage('Usage: extend.js [options]')
@@ -50,9 +50,7 @@ console.log(sectorInfo);
 
 sectorInfo = sectorInfo.replace(sectorSize, size);
 
-console.log(sectorInfo);
-
-// var extendBash = 'echo 0 41943040 thin 252:0 9 | dmsetup load ' + container.device.DeviceName;
+var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName + ' && dmsetup resume ' + container.device.DeviceName + ' && xfs_growfs /dev/mapper/' + device.container.device.DeviceName;
 
 // if(result.code !== 0) {
 //    console.error(result);
