@@ -4,7 +4,7 @@ require('shelljs/global');
 var argv = require('yargs')
   .option('c', {
     alias : 'container',
-    demand: false,
+    demand: true,
     describe: 'container name',
     type: 'string'
   })
@@ -31,5 +31,5 @@ console.log(result);
 if(result.code !== 0) {
    console.error(result);
 }else {
-   console.log('Gosple Container is running, SSH: ' + sshPort, 'Socket: ' + port);
+   console.log('extend success');
 }
