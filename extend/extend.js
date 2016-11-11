@@ -47,7 +47,7 @@ var sectorSize = sectorInfo.split(' ');
 console.log(sectorSize);
 sectorSize = sectorSize[1];
 
-sectorInfo = sectorSize.replace(sectorSize, size);
+sectorInfo = sectorInfo.replace(sectorSize, size);
 
 console.log(sectorInfo);
 
