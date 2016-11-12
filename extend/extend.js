@@ -22,7 +22,6 @@ var argv = require('yargs')
 
 var containerName = argv.c,
   size = argv.s;
-exec("docker start " + containerName);
 
 var containerInfoBash = 'docker inspect ' + containerName;
 var containerInfo = exec(containerInfoBash);
@@ -62,4 +61,3 @@ if (extendingReslt.code !== 0) {
 } else {
   console.log('extend success');
 }
-exec("docker stop " + containerName);
