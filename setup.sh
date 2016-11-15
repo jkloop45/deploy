@@ -58,6 +58,10 @@ git clone https://github.com/Gospely/deploy ~/gospely/deploy
 docker pull nginx
 docker pull node
 docker phpmyadmin/phpmyadmin
+#pull数据库镜像
+docker pull mariadb
+docker pull tutum/mongodb
+docker pull postgres
 
 #创建存储文件夹
 
