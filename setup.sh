@@ -55,8 +55,7 @@ service nginx restart
 
 git clone https://github.com/Gospely/deploy ~/gospely/deploy
 
-docker pull nginx
-docker pull node
+
 docker phpmyadmin/phpmyadmin
 #pull数据库镜像
 docker pull mariadb
@@ -74,6 +73,17 @@ chmod 777 /root/gospely/deploy/shell
 
 #创建phpmyadmin
 docker run --name myadmin -d -e PMA_ARBITRARY=1 -p 8081:80 phpmyadmin/phpmyadmin
+
+# build 镜像
+
+git clone https://github.com/Gospely/docker.git ~/gospely/docker
+
+sh ~/gospely/docker/build.sh
+
+# clone wordpress
+
+git clone https://github.com/WordPress/WordPress.git ~/gospely/applications/wordpress
+
 
 
 #依次构建
