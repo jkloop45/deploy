@@ -65,6 +65,7 @@ docker phpmyadmin/phpmyadmin
 docker pull mariadb
 docker pull tutum/mongodb
 docker pull postgres
+docker pull redis
 
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx
