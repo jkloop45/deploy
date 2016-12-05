@@ -31,6 +31,7 @@ service nginx start
 
 #install git
 sudo yum install git -y
+sudo yum install nodejs -y
 
 #install node
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
@@ -54,13 +55,33 @@ sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 service nginx restart
 
 git clone https://github.com/Gospely/deploy ~/gospely/deploy
+git clone https://github.com/Gospely/allocate.git ~/gospely/allocate
 
+cd ~/gospely/allocate
+npm install
 
 docker phpmyadmin/phpmyadmin
 #pull数据库镜像
 docker pull mariadb
 docker pull tutum/mongodb
 docker pull postgres
+
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx-php
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4
+
+#images rename
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu gospel-ubuntu:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx gospel-nginx:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx-php gospel-nginx-php:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php gospel-php:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress gospel-wordpress:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs gospel-nodejs:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4 gospel-nodejs:4.4.4
 
 #创建存储文件夹
 
