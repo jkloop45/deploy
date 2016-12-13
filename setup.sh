@@ -60,7 +60,6 @@ git clone https://github.com/Gospely/allocate.git ~/gospely/allocate
 cd ~/gospely/allocate
 npm install
 
-docker phpmyadmin/phpmyadmin
 #pull数据库镜像
 docker pull mariadb
 docker pull tutum/mongodb
