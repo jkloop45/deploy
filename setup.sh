@@ -85,7 +85,7 @@ docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4
 
 #创建数据库 redis
 docker run --name gospel-postgres -p 5432:5432 -v /data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
-docker run --name redis -d redis
+docker run --name gospel-redis -d redis
 
 #创建存储文件夹
 
