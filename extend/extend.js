@@ -3,13 +3,13 @@
 require('shelljs/global');
 var argv = require('yargs')
   .option('c', {
-    alias : 'container',
+    alias: 'container',
     demand: true,
     describe: 'container name',
     type: 'string'
   })
   .option('s', {
-    alias : 'size',
+    alias: 'size',
     demand: true,
     describe: 'device size',
   })
@@ -21,7 +21,7 @@ var argv = require('yargs')
   .argv;
 
 var containerName = argv.c,
-    size = argv.s;
+  size = argv.s;
 
 var containerInfoBash = 'docker inspect ' + containerName;
 var containerInfo = exec(containerInfoBash);
@@ -46,14 +46,15 @@ sectorInfo = sectorInfo.stdout;
 var sectorSize = sectorInfo.split(' ');
 sectorSize = sectorSize[1];
 
-sectorInfo = sectorInfo.replace(sectorSize, size).replace(/\r\n/g, '').replace(/\n/g, '');
+sectorInfo = sectorInfo.replace(sectorSize, size).replace(/\r\n/g, '').replace(
+  /\n/g, '');
 
 var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName + ' && dmsetup resume ' + container.device.DeviceName + ' && xfs_growfs /dev/mapper/' + container.device.DeviceName;
 
 var extendingReslt = exec(extendBash);
 
-if(extendingReslt.code !== 0) {
-   console.error(result);
-}else {
-   console.log('extend success');
+if (extendingReslt.code !== 0) {
+  console.error(result);
+} else {
+  console.log('extend success');
 }
