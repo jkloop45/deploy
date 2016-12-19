@@ -6,6 +6,9 @@ RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install openssh-server -y
 
+#use uglifyjs
+RUN npm install uglify-js -g
+
 #use cnpm
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
