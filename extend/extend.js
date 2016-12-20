@@ -49,10 +49,7 @@ sectorSize = sectorSize[1];
 sectorInfo = sectorInfo.replace(sectorSize, size).replace(/\r\n/g, '').replace(
   /\n/g, '');
 
-//
-var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName +
-  ' && dmsetup resume ' + container.device.DeviceName +
-  ' && xfs_growfs /dev/mapper/' + container.device.DeviceName;
+var extendBash = 'echo ' + sectorInfo + ' | dmsetup load ' + container.device.DeviceName + ' && dmsetup resume ' + container.device.DeviceName + ' && xfs_growfs /dev/mapper/' + container.device.DeviceName;
 
 var extendingReslt = exec(extendBash);
 
