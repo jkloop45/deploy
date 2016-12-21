@@ -1,4 +1,4 @@
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
+ocker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-ubuntu
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-mariadb
@@ -12,6 +12,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-nodejs4.4.4:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/debug-nodejs4.4.4-mariadb:latest
 
 #images rename
@@ -29,4 +30,5 @@ docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php gospel-php:la
 docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress gospel-wordpress:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs gospel-nodejs:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4 gospel-nodejs:4.4.4
+docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-nodejs4.4.4:latest gospel-debug-nodejs:4.4.4
 docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/debug-nodejs4.4.4-mariadb:latest gospel-debug-nodejs-mariadb:4.4.4
