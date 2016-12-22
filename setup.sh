@@ -19,12 +19,12 @@ EOF
 sudo yum install docker-engine -y
 sudo systemctl enable docker.service
 sudo systemctl start docker
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy
+#curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy
 sudo systemctl restart docker
 
 #install xfs_growfs to extend devicemapper
 sudo yum install xfsprogs.x86_64 --assumeyes
-
+sudo yum install wget
 #install nginx
 sudo yum install nginx -y
 service nginx start
