@@ -1,4 +1,4 @@
-ocker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
+docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-ubuntu
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-debug-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-mariadb
