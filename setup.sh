@@ -63,7 +63,7 @@ docker pull tutum/mongodb
 docker pull postgres
 docker pull redis
 
-sh ~/gospely/deploy/initImages.sh
+#sh ~/gospely/deploy/initImages.sh
 #创建数据库 redis
 docker run --name gospel-postgres -p 5432:5432 -v /data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 docker run --name gospel-redis -d redis
@@ -80,13 +80,8 @@ chmod 777 /root/gospely/deploy/shell
 
 # build 镜像
 
-git clone https://github.com/Gospely/docker.git ~/gospely/docker
-
-sh ~/gospely/docker/build.sh
 
 # clone wordpress
-
-git clone https://github.com/WordPress/WordPress.git ~/gospely/applications/wordpress
 
 
 
