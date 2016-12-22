@@ -66,23 +66,7 @@ docker pull tutum/mongodb
 docker pull postgres
 docker pull redis
 
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx-php
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs
-docker pull registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4
-
-#images rename
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-ubuntu gospel-ubuntu:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx gospel-nginx:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nginx-php gospel-nginx-php:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-php gospel-php:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-wordpress gospel-wordpress:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs gospel-nodejs:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/sharkseven/gospel-nodejs4.4.4:4.4.4 gospel-nodejs:4.4.4
-
+sh ~/gospely/deploy/initImages.sh
 #创建数据库 redis
 docker run --name gospel-postgres -p 5432:5432 -v /data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 docker run --name gospel-redis -d redis
@@ -96,8 +80,6 @@ mkdir /var/www/storage/profiles
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
 
-#创建phpmyadmin
-docker run --name myadmin -d -e PMA_ARBITRARY=1 -p 8081:80 phpmyadmin/phpmyadmin
 
 # build 镜像
 
