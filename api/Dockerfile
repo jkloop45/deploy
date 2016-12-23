@@ -17,4 +17,4 @@ RUN git clone https://github.com/Gospely/api /var/www/api
 RUN cd /var/www/api && cnpm install
 RUN cnpm install -g supervisor
 
-ENTRYPOINT ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa && cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start
+ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start
