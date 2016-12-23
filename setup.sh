@@ -9,7 +9,14 @@ enabled=1
 gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 EOF
-
+# nginx源
+sudo tee /etc/yum.repos.d/nginx.repo <<-'EOF'
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+EOF
 #配置docker rest api
 sudo tee /etc/systemd/system/docker.service <<- 'EOF'
 [Service]
@@ -27,6 +34,7 @@ sudo yum install xfsprogs.x86_64 --assumeyes
 sudo yum install wget
 #install nginx
 sudo yum install nginx -y
+sudo yum -y install lsof
 service nginx start
 
 #install git
@@ -63,7 +71,9 @@ docker pull tutum/mongodb
 docker pull postgres
 docker pull redis
 
+#官方镜像
 #sh ~/gospely/deploy/initImages.sh
+
 #创建数据库 redis
 docker run --name gospel-postgres -p 5432:5432 -v /data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 docker run --name gospel-redis -d redis
@@ -76,14 +86,6 @@ mkdir /var/www/storage/profiles
 
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
-
-
-# build 镜像
-
-
-# clone wordpress
-
-
 
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
