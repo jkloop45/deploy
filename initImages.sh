@@ -16,6 +16,10 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php-mariadb
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/wordpress
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/wordpress-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4
@@ -46,6 +50,10 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php-mariadb gosp
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/wordpress gospel-wordpress:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/wordpress-mariadb gospel-wordpress-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/discuz gospel-discuz:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb gospel-discuz-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind gospel-phpwind:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb gospel-phpwind-mariadb:latest
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest gospel-nodejs:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4 gospel-nodejs:4.4.4
