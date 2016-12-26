@@ -20,6 +20,10 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/laravel
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/laravel-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp-mariadb
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4
@@ -27,6 +31,27 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:4.4.4
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:4.4.4
+
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/vue:1
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/vue:2
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/react
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/angular:1
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/angular:2
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa:1
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa:2
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4
+
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:1
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:2
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mongodb:1
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mongodb:2
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express-mongodb
+
+
+
 
 
 
@@ -55,9 +80,35 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb gospel-discuz
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind gospel-phpwind:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb gospel-phpwind-mariadb:latest
 
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/laravel gospel-laravel:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/laravel-mariadb gospel-laravel-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp gospel-thinkphp:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp-mariadb gospel-thinkphp-mariadb:latest
+
+
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest gospel-nodejs:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4 gospel-nodejs:4.4.4
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:latest gospel-debug-nodejs:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:4.4.4 gospel-debug-nodejs:4.4.4
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:latest gospel-nodejs-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:4.4.4 gospel-nodejs-mariadb:4.4.4
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/vue:1 gospel-vue:1
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/vue:2 gospel-vue:2
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/react gospel-react:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/angular:1 gospel-angular:1
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/angular:2 gospel-angular:2
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap gospel-bootstrap:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4 gospel-bootstrap:4
+
+
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:1 gospel-koa:1
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:2 gospel-koa:2
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:1 gospel-koa-mariadb:1
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:2 gospel-koa-mariadb:2
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mongodb:1 gospel-koa-mongodb:1
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mongodb:2 gospel-koa-mongodb:2
+
+
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express gospel-express
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express-mariadb gospel-express-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express-mongodb:1 gospel-express-mongodb:latest
