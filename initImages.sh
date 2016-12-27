@@ -112,3 +112,6 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mongodb:2 gospel-koa-mon
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express gospel-express
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express-mariadb gospel-express-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/express-mongodb:1 gospel-express-mongodb:latest
+
+
+docker rmi $(docker images |awk '/^registry-cn*/ { print $3}')
