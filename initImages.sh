@@ -42,6 +42,8 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa:2
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/html:latest
+
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:1
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:2
@@ -99,6 +101,8 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/angular:1 gospel-angular:1
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/angular:2 gospel-angular:2
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap gospel-bootstrap:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4 gospel-bootstrap:4
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/html:latest gospel-html:latest
+
 
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:1 gospel-koa:1
