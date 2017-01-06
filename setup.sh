@@ -74,6 +74,8 @@ docker pull redis
 #官方镜像
 #sh ~/gospely/deploy/initImages.sh
 
+#获取数据库备份
+git clone https://git.oschina.net/sharkseven/pg.git /data
 #创建数据库 redis
 docker run --name gospel-postgres -v /data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 docker run --name gospel-redis -d redis
