@@ -26,7 +26,7 @@ EOF
 sudo yum install docker-engine -y
 sudo systemctl enable docker.service
 sudo systemctl start docker
-#curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f6dfceb5.m.daocloud.io Copy
 sudo systemctl restart docker
 
 #install xfs_growfs to extend devicemapper
@@ -86,6 +86,9 @@ mkdir /var/www/storage/profiles
 
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
+
+sh ~/gospely/deploy/security.sh
+sh ~/gospely/deploy/initImages.sh
 
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
