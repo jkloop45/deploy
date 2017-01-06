@@ -48,10 +48,11 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm install v6
 npm install -g cnpm --registry=https://registry.npm.taobao.org
-
+npm install -g pm2
 #clone index
 git clone https://github.com/Gospely/index /var/www/gospely/index
-
+#cone webhhok
+git clone https://github.com/Gospely/webhook /var/www/gospely/webhook
 
 #config nginx
 #modify the default workspace of nginx
