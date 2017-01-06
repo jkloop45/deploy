@@ -48,8 +48,8 @@ cat /root/gospely/deploy/denyhosts.txt >> /usr/share/denyhosts/denyhosts.cfg
 /etc/init.d/denyhosts start
 
 service denyhosts stop
-touch /usr/share/denyhosts/data/allowed-hosts
-cat /root/gospely/deploy/allowed-hosts.txt >> /usr/share/denyhosts/data/allowed-hosts
+#touch /usr/share/denyhosts/data/allowed-hosts
+#cat /root/gospely/deploy/allowed-hosts.txt >> /usr/share/denyhosts/data/allowed-hosts
 
 service denyhosts start
 #启动服务
