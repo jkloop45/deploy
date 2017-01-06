@@ -1,5 +1,6 @@
 #!/bin/bash
-
+yum update
+yum install wget
 wget http://sourceforge.net/projects/denyhosts/files/denyhosts/2.6/DenyHosts-2.6.tar.gz
 #下载软件
 
@@ -40,7 +41,7 @@ chkconfig denyhosts on
 cp denyhosts.cfg denyhosts.cfg.bak
 #备份配置文件，为修改配置做准备
 
-cat /root/gospely/deploy/denyhost.txt &gt; /usr/share/denyhosts/denyhosts.cfg
+cat /root/gospely/deploy/denyhosts.txt &gt; /usr/share/denyhosts/denyhosts.cfg
 #将配置文件内容导入配置文件（我的配置文件安装之前已经配置好了！）
 
 /etc/init.d/denyhosts start
