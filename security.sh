@@ -43,8 +43,8 @@ cp denyhosts.cfg denyhosts.cfg.bak
 
 #将配置文件内容导入配置文件（我的配置文件安装之前已经配置好了！）
 cat /root/gospely/deploy/denyhosts.txt >> /usr/share/denyhosts/denyhosts.cfg
-touch /usr/share/denyhosts/allowed-hosts
-cat /root/gospely/deploy/allowed-hosts.txt >> /usr/share/denyhosts/allowed-hosts
+touch /usr/share/denyhosts/data/allowed-hosts
+cat /root/gospely/deploy/allowed-hosts.txt >> /usr/share/denyhosts/data/allowed-hosts
 
 /etc/init.d/denyhosts start
 #启动服务
