@@ -42,15 +42,15 @@ server {
 }
 EOF
 
-sudo tee /etc/nginx/conf.d/payment.gospely.com.conf <<- 'EOF'
-upstream nodejs__upstream_gospely_payment {
-        server 127.0.0.1:9527;
+sudo tee /etc/nginx/conf.d/ide.gospely.com.conf <<- 'EOF'
+upstream nodejs__upstream_gospely_ide {
+        server 127.0.0.1:9997;
         keepalive 64;
 }
 
 server {
         listen 80;
-        server_name www.payment.gospely.com payment.gospely.com;
+        server_name www.ide.gospely.com ide.gospely.com;
         #access_log /var/log/nginx/moiveme.log;
         location / {
           proxy_set_header   X-Real-IP            $remote_addr;
@@ -59,7 +59,31 @@ server {
           proxy_set_header   X-NginX-Proxy    true;
           proxy_set_header   Connection "";
           proxy_http_version 1.1;
-          proxy_pass         http://nodejs__upstream_gospely_payment;
+          proxy_pass         http://nodejs__upstream_gospely_ide;
         }
+}
+EOF
+
+sudo tee /etc/nginx/conf.d/gospely.com.conf <<- 'EOF'
+server {
+
+  listen 80;
+
+  server_name gospely.com www.gospely.com;
+
+  location / {
+
+    root /var/www/gospely/index;
+
+    index index.html;
+
+  }
+
+  location ~ /.ht {
+
+    deny all;
+
+  }
+
 }
 EOF
