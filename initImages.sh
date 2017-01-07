@@ -13,10 +13,10 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php-mariadb
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/php:7
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/php:5
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/php-mariadb:7
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/php-mariadb:5
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php:7
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php:5
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php-mariadb:7
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php-mariadb:5
 
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/wordpress
@@ -81,10 +81,10 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php gospel-nginx-php:l
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php gospel-debug-nginx-php:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php-mariadb gospel-nginx-php-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php-mariadb gospel-debug-nginx-php-mariadb:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php:7 gospel-php:7
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php:5 gospel-php:5
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php-mariadb:7 gospel-php-mariadb:7
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php-mariadb:5 gospel-php-mariadb:5
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php:7 gospel-debug-php:7
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/php:5 gospel-debug-php:5
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-php-mariadb:7 gospel-debug-php-mariadb:7
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-php-mariadb:5 gospel-debug-php-mariadb:5
 
 
 
