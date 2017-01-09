@@ -5,6 +5,7 @@ MAINTAINER ivy 'xieyang@dodora.cn'
 RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install openssh-server -y
+RUN apt-get install zip -y
 
 #use uglifyjs
 RUN npm -g install js-beautify
