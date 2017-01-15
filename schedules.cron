@@ -1,0 +1,1 @@
+10,20,30,40,50,59 * * * * curl http:\\localhost:9999/schedules/docker
