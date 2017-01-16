@@ -49,14 +49,9 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v6
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 npm install -g pm2
-#clone index
-git clone https://github.com/Gospely/index /var/www/gospely/index
+
 #cone webhhok
 git clone https://github.com/Gospely/webhook /var/www/gospely/webhook
-
-#config nginx
-#modify the default workspace of nginx
-sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 
 service nginx restart
 
@@ -98,6 +93,8 @@ sh ~/gospely/deploy/security.sh
 sh ~/gospely/deploy/initImages.sh
 
 #依次构建
-sh ~/gospely/deploy/admin/deploy.sh
-sh ~/gospely/deploy/api/deploy.sh
-sh ~/gospely/deploy/dash/deploy.sh
+docker pull registry.cn-hangzhou.aliyuncs.com/office/api
+docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
+docker run -itd -p 9999:8089 -v /var/www/storage:/var/www/storage -w /var/www/api -v /var/www/ssh:/root/.ssh -v /var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-redis:redis --link gospel-postgres:gospely.com gospel_api
+docker exec gospel_api ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+cat /var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys

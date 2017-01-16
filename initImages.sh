@@ -1,17 +1,18 @@
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ubuntu
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-ubuntu
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-mariadb
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/mariadb
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ubuntu
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-ubuntu
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-mariadb
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/mariadb
+#
+#
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-mariadb
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-mariadb
 
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php
 
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-mariadb
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-mariadb
-
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php-mariadb
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-php-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php:7
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-php:5
@@ -30,8 +31,9 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/laravel-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp-mariadb
 
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest
+# docker pull registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4
+
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:4.4.4
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:latest
@@ -65,16 +67,16 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express-mongodb
 
 
 #images rename
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ubuntu gospel-ubuntu:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-ubuntu gospel-debug-ubuntu:latest
-
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/mariadb gospel-mariadb:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-mariadb gospel-debug-mariadb:latest
-
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx gospel-nginx:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx gospel-debug-nginx:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx-mariadb gospel-nginx-mariadb:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-mariadb gospel-debug-nginx-mariadb:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ubuntu gospel-ubuntu:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-ubuntu gospel-debug-ubuntu:latest
+#
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/mariadb gospel-mariadb:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-mariadb gospel-debug-mariadb:latest
+#
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx gospel-nginx:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx gospel-debug-nginx:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx-mariadb gospel-nginx-mariadb:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nginx-mariadb gospel-debug-nginx-mariadb:latest
 
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nginx-php gospel-nginx-php:latest
