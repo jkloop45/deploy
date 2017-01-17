@@ -50,6 +50,12 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v6
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 npm install -g pm2
+
+wget http://www.rarlab.com/rar/rarlinux-x64-5.3.0.tar.gz
+tar -xzvf rarlinux-x64-5.3.0.tar.gz
+mv rar /usr/local
+ln -s /usr/local/rar/rar /usr/local/bin/rar
+ln -s /usr/local/rar/unrar /usr/local/bin/unrar
 #clone index
 git clone https://github.com/Gospely/index /var/www/gospely/index
 #cone webhhok
