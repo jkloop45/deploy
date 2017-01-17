@@ -31,7 +31,8 @@ sudo systemctl restart docker
 
 #install xfs_growfs to extend devicemapper
 sudo yum install xfsprogs.x86_64 --assumeyes
-sudo yum install wget
+sudo yum install wget -y
+sudo yum install unzip -y
 #install nginx
 sudo yum install nginx -y
 sudo yum -y install lsof
