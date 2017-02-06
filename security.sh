@@ -41,7 +41,7 @@ chkconfig denyhosts on
 cp denyhosts.cfg denyhosts.cfg.bak
 #备份配置文件，为修改配置做准备
 
-#将配置文件内容导入配置文件（我的配置文件安装之前已经配置好了！）
+#将配置文件内容导入配置文件
 cat /root/gospely/deploy/denyhosts.txt >> /usr/share/denyhosts/denyhosts.cfg
 
 
