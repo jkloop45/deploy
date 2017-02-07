@@ -1,5 +1,6 @@
 #启动暴露破解防护,启动端口探测防护
 /usr/local/psionic/portsentry/portsentry -atcp
+rm -f /var/lock/subsys/denyhosts
 /etc/init.d/denyhosts start
 #启动webhook
 pm2 start /var/www/gospely/webhook/index.js
