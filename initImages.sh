@@ -53,7 +53,11 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa:2
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/express
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4
-docker pull registry.cn-hangzhou.aliyuncs.com/gospel/html:latest
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ionic:blank
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ionic:tabs
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ionic:sidemenu
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/quasar:latest
+
 
 
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:1
@@ -121,8 +125,10 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/angular:2 gospel-angular:2
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap gospel-bootstrap:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/bootstrap:4 gospel-bootstrap:4
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/html:latest gospel-debug-html:latest
-
-
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ionic:blank gospel-ionic:blank
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ionic:tabs gospel-ionic:tabs
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ionic:sidemenu gospel-ionic:sidemenu
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/quasar:latest gospel-quasar:latest
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:1 gospel-koa:1
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:2 gospel-koa:2
