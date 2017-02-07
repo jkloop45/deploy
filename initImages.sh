@@ -26,6 +26,8 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/weiqing
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/weiqing-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/laravel
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/laravel-mariadb
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp
@@ -95,8 +97,9 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/wordpress-mariadb gospel-wor
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/discuz gospel-discuz:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/discuz-mariadb gospel-discuz-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind gospel-phpwind:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb gospel-phpwind-mariadb:latest
-
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/phpwind-mariadb gospel-weiqing-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/weiqing gospel-phpwind:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/weiqing-mariadb gospel-weiqing-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/laravel gospel-laravel:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/laravel-mariadb gospel-laravel-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp gospel-thinkphp:latest
