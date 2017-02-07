@@ -101,3 +101,7 @@ sh ~/gospely/deploy/initImages.sh
 sh ~/gospely/deploy/admin/deploy.sh
 sh ~/gospely/deploy/api/deploy.sh
 sh ~/gospely/deploy/dash/deploy.sh
+
+#设置开机自动执行脚本
+
+echo /etc/rc.d/rc.local >> sh ~/gospely/auto_setup.sh
