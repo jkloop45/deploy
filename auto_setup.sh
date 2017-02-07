@@ -7,8 +7,8 @@ service nginx start
 service docker start
 # 启动数据卷容器
 docker start $( docker ps -a | awk '/ubuntu*/ {print $1}')
-docker start gospel_postgres
-docker start gospel_redis
+docker start gospelypostgres
+docker start gospel-redis
 docker start gospel_api
 docker start gospel_ide
 docker start gospel_dash
