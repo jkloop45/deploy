@@ -111,8 +111,6 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp gospel-thinkphp:lat
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/thinkphp-mariadb gospel-thinkphp-mariadb:latest
 
 
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:latest gospel-nodejs:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/gospel/nodejs:4.4.4 gospel-nodejs:4.4.4
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:latest gospel-debug-nodejs:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs:4.4.4 gospel-debug-nodejs:4.4.4
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/debug-nodejs-mariadb:latest gospel-debug-nodejs-mariadb:latest
