@@ -1,1 +1,2 @@
-docker exec $1 bash -c "git pull origin $2"
+docker exec $1 bash -c "git pull origin $2
+"
