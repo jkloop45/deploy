@@ -1,1 +1,1 @@
-docker exec $1 bash -c ". /root/.nvm/nvm.sh && $2"
+docker exec $1 sh /root/.gospely/.git_shell/.nvm/.nvmboot.sh $2
