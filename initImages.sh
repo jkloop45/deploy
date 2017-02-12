@@ -59,6 +59,9 @@ docker pull registry.cn-hangzhou.aliyuncs.com/gospel/ionic:sidemenu
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/quasar:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/vd:pc
 docker pull registry.cn-hangzhou.aliyuncs.com/gospel/vd:site
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/framework7:latest
+docker pull registry.cn-hangzhou.aliyuncs.com/gospel/framework7:vue
+
 
 
 
@@ -132,6 +135,10 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/ionic:sidemenu gospel-ionic:
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/quasar:latest gospel-quasar:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/vd:pc gospel-vd:pc
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/vd:site gospel-vd:site
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/framework7:latest gospel-framework7:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/gospel/framework7:vue gospel-framework7:vue
+
+
 
 
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:1 gospel-koa:1
