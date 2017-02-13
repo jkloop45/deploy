@@ -137,8 +137,6 @@ docker tag registry.cn-hangzhou.aliyuncs.com/gospel/framework7:latest gospel-fra
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/framework7:vue gospel-framework7:vue
 
 
-
-
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:1 gospel-koa:1
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa:2 gospel-koa:2
 docker tag registry.cn-hangzhou.aliyuncs.com/gospel/koa-mariadb:1 gospel-koa-mariadb:1
