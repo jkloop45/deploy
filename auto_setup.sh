@@ -7,7 +7,7 @@ pm2 start /var/www/gospely/webhook/index.js
 service nginx start
 service docker start
 # 启动数据卷容器
-docker start $( docker ps -a | awk '/ubuntu*/ {print $1}')
+docker start $( docker ps -a | grep 'docker-volume-' | awk '{print $1}')
 docker start gospel-postgres
 docker start gospel-redis
 docker start gospel_api
