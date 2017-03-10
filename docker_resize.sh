@@ -7,3 +7,5 @@ dd if=/dev/zero of=/mnt/docker/devicemapper/devicemapper/data bs=1G count=0 seek
 ln -s /mnt/docker /var/lib/docker
 ls /var/lib/docker
 service docker start
+
+sh /gospely/deploy/auto_setup.sh
