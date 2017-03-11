@@ -91,7 +91,6 @@ rm -rf pg
 
 #创建数据库 redis
 docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
-docker run --name gospel-redis -d redis
 
 #创建存储文件夹
 

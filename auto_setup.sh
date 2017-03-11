@@ -9,7 +9,6 @@ service docker start
 # 启动数据卷容器
 docker start $( docker ps -a | grep 'docker-volume-' | awk '{print $1}')
 docker start gospel-postgres
-docker start gospel-redis
 docker start gospel_api
 docker start gospel_ide
 docker start gospel_dash
