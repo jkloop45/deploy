@@ -95,9 +95,9 @@ docker run --name gospel-redis -d redis
 
 #创建存储文件夹
 
-mkdir /var/www/storage
-mkdir /var/www/storage/codes
-mkdir /var/www/storage/profiles
+mkdir /mnt/var/www/storage
+mkdir /mnt/var/www/storage/codes
+mkdir /mnt/var/www/storage/profiles
 
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
