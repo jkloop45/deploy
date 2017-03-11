@@ -99,6 +99,10 @@ mkdir /mnt/var/www/storage
 mkdir /mnt/var/www/storage/codes
 mkdir /mnt/var/www/storage/profiles
 
+# 创建稀疏文件模板
+mkdir /root/.volume
+dd if=/dev/zero of=/root/.volume/temp.img bs=10M count=2014
+
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
 #修改文件监听配置
