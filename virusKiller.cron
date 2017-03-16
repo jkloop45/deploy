@@ -1,1 +1,1 @@
-* * * * * kill -9 $(ps -ef | grep '/tmp/' | grep '?' | awk '{print $1}')
+* * * * * kill -9 $(ps -ef | grep '/tmp/' | grep '?' | awk '{print $2}')
