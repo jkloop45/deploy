@@ -1,4 +1,2 @@
 20,40,59 * * * * echo 3 > /proc/sys/vm/drop_caches
 0,1 * * * * sh /root/gospely/deploy/dbback.sh
-* * * * * * kill -9 $(cat /tmp/idus.log)
-* * * * * * kill -9 $(cat /tmp/vga.conf)
