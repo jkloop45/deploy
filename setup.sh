@@ -85,7 +85,7 @@ docker pull redis
 
 #获取数据库备份
 git clone https://git.oschina.net/sharkseven/pg.git
-tar -zxvf pg/postgres.tar.gz
+unzip pg/postgres.tar.gz
 mv postgres /data/
 rm -rf pg
 

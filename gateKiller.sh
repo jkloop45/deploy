@@ -1,0 +1,13 @@
+rm -rf /usr/bin/.sshd
+rm -rf /usr/bin/bsd-port/getty
+rm -rf /tmp/lang
+rm -rf /etc/init.d/DbSecuritySpt
+rm -rf /etc/rc[1-5].d/S97DbSecuritySpt
+rm -rf /etc/rc[1-5].d/S99selinux
+rm -rf /etc/conf.n
+rm -rf /etc/cmd.n
+rm -rf /usr/lib/libamplify.so
+rm -rf /usr/bin/bsd-port/conf.n
+rm -rf /tmp/*.lock
+rm -rf /tmp/moni.lod
+rm -rf /tmp/gates.lod
