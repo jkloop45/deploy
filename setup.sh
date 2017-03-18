@@ -85,9 +85,8 @@ docker pull redis
 
 #获取数据库备份
 git clone --depth=1 https://git.oschina.net/sharkseven/pg.git
-unzip /pg/postgres.zip
-mv /pg/postgres /mnt/data/
-rm -rf pg
+unzip pg/postgres.zip
+bash -c 'cd /pg && mv postgres /mnt/data/ && rm -rf pg'
 
 #创建数据库 redis
 docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
@@ -116,8 +115,16 @@ sh ~/gospely/deploy/portsentry.sh
 
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
-sh ~/gospely/deploy/api/deploy.sh
+#sh ~/gospely/deploy/api/deploy.sh
 sh ~/gospely/deploy/dash/deploy.sh
+
+# 部署api
+#依次构建
+docker pull registry.cn-hangzhou.aliyuncs.com/office/api
+docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
+docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-postgres:gospely.com gospel_api
+docker exec gospel_api ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+cat /mnt/var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 #设置开机自动执行脚本
 
