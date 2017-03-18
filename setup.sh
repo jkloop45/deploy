@@ -120,3 +120,6 @@ sh ~/gospely/deploy/dash/deploy.sh
 #设置开机自动执行脚本
 
 echo /etc/rc.d/rc.local >> sh ~/gospely/auto_setup.sh
+
+# 设置定时任务
+crontab /root/gospely/deploy/schedules.cron
