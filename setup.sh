@@ -79,8 +79,6 @@ docker pull mariadb
 docker pull tutum/mongodb
 docker pull postgres
 
-#官方镜像
-#sh ~/gospely/deploy/initImages.sh
 
 #创建存储文件夹
 
@@ -108,12 +106,10 @@ echo 8192000000 > /proc/sys/fs/inotify/max_user_watches
 
 sh ~/gospely/deploy/security.sh
 sh ~/gospely/deploy/portsentry.sh
-#sh ~/gospely/deploy/initImages.sh
-
-
 
 # 部署api
 #依次构建
+rm -rf ~/.ssh/id_rsa
 docker pull registry.cn-hangzhou.aliyuncs.com/office/api
 docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
 docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-postgres:gospely.com gospel_api
@@ -131,3 +127,6 @@ crontab /root/gospely/deploy/schedules.cron
 sh ~/gospely/deploy/admin/deploy.sh
 #sh ~/gospely/deploy/api/deploy.sh
 sh ~/gospely/deploy/dash/deploy.sh
+
+#官方镜像
+sh ~/gospely/deploy/initImages.sh
