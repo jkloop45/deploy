@@ -86,7 +86,7 @@ docker pull redis
 #获取数据库备份
 git clone --depth=1 https://git.oschina.net/sharkseven/pg.git
 unzip pg/postgres.zip
-mv postgres /mnt/data/
+mv pg/postgres /mnt/data/
 rm -rf pg
 
 #创建数据库 redis
