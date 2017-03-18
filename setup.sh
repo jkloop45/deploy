@@ -82,20 +82,18 @@ docker pull postgres
 #官方镜像
 #sh ~/gospely/deploy/initImages.sh
 
-#获取数据库备份
-git clone --depth=1 https://git.oschina.net/sharkseven/pg.git
-unzip pg/postgres.zip
-bash -c 'cd /pg && mv postgres /mnt/data/ && rm -rf pg'
-
-#创建数据库 redis
-docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
-
 #创建存储文件夹
 
 mkdir /mnt/var/www/storage
 mkdir /mnt/var/www/storage/codes
 mkdir /mnt/var/www/storage/profiles
 mkdir /mnt/data
+
+#获取数据库备份
+bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git  && unzip pg/postgres.zip && mv pg/postgres /mnt/data/ && rm -rf pg'
+
+#创建数据库 redis
+docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 
 
 # 创建稀疏文件模板
