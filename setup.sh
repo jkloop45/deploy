@@ -85,8 +85,8 @@ docker pull redis
 
 #获取数据库备份
 git clone --depth=1 https://git.oschina.net/sharkseven/pg.git
-unzip pg/postgres.zip
-mv pg/postgres /mnt/data/
+unzip /pg/postgres.zip
+mv /pg/postgres /mnt/data/
 rm -rf pg
 
 #创建数据库 redis
@@ -97,6 +97,8 @@ docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql
 mkdir /mnt/var/www/storage
 mkdir /mnt/var/www/storage/codes
 mkdir /mnt/var/www/storage/profiles
+mkdir /mnt/data
+
 
 # 创建稀疏文件模板
 #mkdir /root/.volume
