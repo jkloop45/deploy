@@ -84,9 +84,9 @@ docker pull redis
 #sh ~/gospely/deploy/initImages.sh
 
 #获取数据库备份
-git clone https://git.oschina.net/sharkseven/pg.git
-unzip pg/postgres.tar.gz
-mv postgres /data/
+git clone --depth=1 https://git.oschina.net/sharkseven/pg.git
+unzip pg/postgres.zip
+mv postgres /mnt/data/
 rm -rf pg
 
 #创建数据库 redis
@@ -99,8 +99,8 @@ mkdir /mnt/var/www/storage/codes
 mkdir /mnt/var/www/storage/profiles
 
 # 创建稀疏文件模板
-mkdir /root/.volume
-dd if=/dev/zero of=/root/.volume/temp.img bs=10M count=2014
+#mkdir /root/.volume
+#dd if=/dev/zero of=/root/.volume/temp.img bs=10M count=2014
 
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
@@ -110,7 +110,7 @@ echo 8192000000 > /proc/sys/fs/inotify/max_user_watches
 
 sh ~/gospely/deploy/security.sh
 sh ~/gospely/deploy/portsentry.sh
-sh ~/gospely/deploy/initImages.sh
+#sh ~/gospely/deploy/initImages.sh
 
 #依次构建
 sh ~/gospely/deploy/admin/deploy.sh
@@ -119,7 +119,7 @@ sh ~/gospely/deploy/dash/deploy.sh
 
 #设置开机自动执行脚本
 
-echo /etc/rc.d/rc.local >> sh ~/gospely/auto_setup.sh
+echo /etc/rc.d/rc.local >> sh ~/gospely/deploy/auto_setup.sh
 
 # 设置定时任务
 crontab /root/gospely/deploy/schedules.cron
