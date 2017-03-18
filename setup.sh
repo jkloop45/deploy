@@ -78,7 +78,6 @@ npm install
 docker pull mariadb
 docker pull tutum/mongodb
 docker pull postgres
-docker pull redis
 
 #官方镜像
 #sh ~/gospely/deploy/initImages.sh
