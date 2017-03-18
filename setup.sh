@@ -113,10 +113,7 @@ sh ~/gospely/deploy/security.sh
 sh ~/gospely/deploy/portsentry.sh
 #sh ~/gospely/deploy/initImages.sh
 
-#依次构建
-sh ~/gospely/deploy/admin/deploy.sh
-#sh ~/gospely/deploy/api/deploy.sh
-sh ~/gospely/deploy/dash/deploy.sh
+
 
 # 部署api
 #依次构建
@@ -132,3 +129,8 @@ echo /etc/rc.d/rc.local >> sh ~/gospely/deploy/auto_setup.sh
 
 # 设置定时任务
 crontab /root/gospely/deploy/schedules.cron
+
+#依次构建
+sh ~/gospely/deploy/admin/deploy.sh
+#sh ~/gospely/deploy/api/deploy.sh
+sh ~/gospely/deploy/dash/deploy.sh
