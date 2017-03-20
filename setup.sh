@@ -88,7 +88,7 @@ mkdir /mnt/var/www/storage/profiles
 mkdir /mnt/data
 
 #获取数据库备份
-bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git && cat pg/postgres.tar.gz.* | tar -zxv && mv pg/postgres /mnt/data/ && rm -rf pg'
+bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git /mnt/data/ && cat postgres.tar.gz.* | tar -zxv '
 
 #创建数据库 redis
 docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres

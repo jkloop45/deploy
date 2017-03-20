@@ -17,5 +17,6 @@ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 RUN git clone https://github.com/Gospely/api /var/www/api
 RUN cd /var/www/api && cnpm install
 RUN cnpm install -g supervisor
-
+#修改时区
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start
