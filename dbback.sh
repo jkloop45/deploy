@@ -1,1 +1,1 @@
-bash -c " cd /mnt/data && zip -r postgres.zip postgres && git add . && git commit -m 'update' && git push && echo backup: $(date '+%Y%m%d %H:%M:%S') >> /mnt/data/log.txt"
+bash -c " cd /mnt/data && tar -zcvf postgres.tar.gz postgres | split -b 59M -d -a 3 - postgres.tar.gz. && git add . && git commit -m 'update' && git push && echo backup: $(date '+%Y%m%d %H:%M:%S') >> /mnt/data/log.txt"
