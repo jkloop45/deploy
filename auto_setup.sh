@@ -2,6 +2,8 @@
 /usr/local/psionic/portsentry/portsentry -atcp
 rm -f /var/lock/subsys/denyhosts
 /etc/init.d/denyhosts start
+# 监听数量设置
+sysctl -w fs.inotify.max_user_watches="99999999999"
 #启动webhook
 pm2 start /var/www/gospely/webhook/index.js
 service nginx start

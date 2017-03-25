@@ -101,7 +101,7 @@ docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql
 #设置脚本运行权限
 chmod 777 /root/gospely/deploy/shell
 #修改文件监听配置
-echo 8192000000 > /proc/sys/fs/inotify/max_user_watches
+sysctl -w fs.inotify.max_user_watches="99999999999"
 
 
 sh ~/gospely/deploy/security.sh
