@@ -51,6 +51,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/dodora/koa:2
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/express
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/bootstrap
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/bootstrap:4
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/html:latest
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/ionic:blank
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/ionic:tabs
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/ionic:sidemenu
@@ -88,9 +89,9 @@ docker pull registry.cn-hangzhou.aliyuncs.com/dodora/express:mongodb
 # docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-nginx:mariadb gospel-debug-nginx-mariadb:latest
 
 
-docker tag registry.cn-hangzhou.aliyuncs.com/dodora/nginx-php gospel-nginx-php:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/dodora/nginx-php gospel-nginx-php:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-nginx-php gospel-debug-nginx-php:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/dodora/nginx-php:mariadb gospel-nginx-php-mariadb:latest
+# docker tag registry.cn-hangzhou.aliyuncs.com/dodora/nginx-php:mariadb gospel-nginx-php-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-nginx-php:mariadb gospel-debug-nginx-php-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-php:7 gospel-debug-php:7
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-php:5 gospel-debug-php:5
@@ -104,8 +105,8 @@ docker tag registry.cn-hangzhou.aliyuncs.com/dodora/wordpress:mariadb gospel-wor
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/discuz gospel-discuz:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/discuz:mariadb gospel-discuz-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/phpwind gospel-phpwind:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/dodora/phpwind:mariadb gospel-weiqing-mariadb:latest
-docker tag registry.cn-hangzhou.aliyuncs.com/dodora/weiqing gospel-phpwind:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/phpwind:mariadb gospel-phpwind-mariadb:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/weiqing gospel-weiqing:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/weiqing:mariadb gospel-weiqing-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/laravel gospel-laravel:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/laravel:mariadb gospel-laravel-mariadb:latest
