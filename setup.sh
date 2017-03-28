@@ -68,6 +68,8 @@ sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 
 service nginx restart
 
+sh /root/gospely/deploy/docker_resize.sh
+
 git clone https://github.com/Gospely/deploy ~/gospely/deploy
 git clone https://github.com/Gospely/allocate.git ~/gospely/allocate
 
