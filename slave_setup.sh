@@ -58,13 +58,13 @@ mv rar /usr/local
 ln -s /usr/local/rar/rar /usr/local/bin/rar
 ln -s /usr/local/rar/unrar /usr/local/bin/unrar
 #clone index
-git clone https://github.com/Gospely/index /var/www/gospely/index
+# git clone https://github.com/Gospely/index /var/www/gospely/index
 #cone webhhok
 git clone https://github.com/Gospely/webhook /var/www/gospely/webhook
 
 #config nginx
 #modify the default workspace of nginx
-sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
+# sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 
 service nginx restart
 
@@ -84,16 +84,16 @@ docker pull postgres
 
 #创建存储文件夹
 
-mkdir /mnt/var/www/storage
-mkdir /mnt/var/www/storage/codes
-mkdir /mnt/var/www/storage/profiles
-mkdir /mnt/data
+mkdir -p /mnt/var/www/storage
+mkdir -p /mnt/var/www/storage/codes
+mkdir -p /mnt/var/www/storage/profiles
+mkdir -p /mnt/data
 
 #获取数据库备份
 bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git /mnt/data/ && tar -xzvf postgres.tar.gz'
 
 #创建数据库 redis
-docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
+# docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 
 
 # 创建稀疏文件模板
@@ -126,9 +126,9 @@ echo /etc/rc.d/rc.local >> sh ~/gospely/deploy/auto_setup.sh
 crontab /root/gospely/deploy/schedules.cron
 
 #依次构建
-sh ~/gospely/deploy/admin/deploy.sh
-#sh ~/gospely/deploy/api/deploy.sh
-sh ~/gospely/deploy/dash/deploy.sh
+# sh ~/gospely/deploy/admin/deploy.sh
+# #sh ~/gospely/deploy/api/deploy.sh
+# sh ~/gospely/deploy/dash/deploy.sh
 
 #官方镜像
 sh ~/gospely/deploy/initImages.sh

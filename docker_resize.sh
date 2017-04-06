@@ -9,4 +9,4 @@ service docker start
 sh /gospely/deploy/auto_setup.sh
 
 #devicemapper 扩容
-dd if=/dev/zero of=/test/docker/devicemapper/devicemapper/data bs=1G count=0 seek=250
+dd if=/dev/zero of=/mnt/docker/devicemapper/devicemapper/data bs=1G count=0 seek=250
