@@ -114,7 +114,7 @@ sh ~/gospely/deploy/portsentry.sh
 rm -rf ~/.ssh/id_rsa
 docker pull registry.cn-hangzhou.aliyuncs.com/office/api
 docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
-docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api"
+docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api"  gospel_api
 cat /mnt/var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 #设置开机自动执行脚本
