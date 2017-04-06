@@ -114,8 +114,7 @@ sh ~/gospely/deploy/portsentry.sh
 rm -rf ~/.ssh/id_rsa
 docker pull registry.cn-hangzhou.aliyuncs.com/office/api
 docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
-docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-postgres:gospely.com gospel_api
-docker exec gospel_api ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api"
 cat /mnt/var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 #设置开机自动执行脚本
@@ -127,7 +126,7 @@ crontab /root/gospely/deploy/schedules.cron
 
 #依次构建
 # sh ~/gospely/deploy/admin/deploy.sh
-# #sh ~/gospely/deploy/api/deploy.sh
+# sh ~/gospely/deploy/api/deploy.sh
 # sh ~/gospely/deploy/dash/deploy.sh
 
 #官方镜像
