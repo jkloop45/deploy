@@ -44,7 +44,7 @@ EOF
 
 sudo tee /etc/nginx/conf.d/ide.gospely.com.conf <<- 'EOF'
 upstream nodejs__upstream_gospely_ide {
-        server 127.0.0.1:9996;
+        server 127.0.0.1:999;
         keepalive 64;
 }
 
@@ -74,6 +74,30 @@ server {
   location / {
 
     root /var/www/gospely/index;
+
+    index index.html;
+
+  }
+
+  location ~ /.ht {
+
+    deny all;
+
+  }
+
+}
+EOF
+
+sudo tee /etc/nginx/conf.d/static.gospel.design.conf <<- 'EOF'
+server {
+
+  listen 80;
+
+  server_name static.gospel.design www.static.gospel.design;
+
+  location / {
+
+    root /mnt/static;
 
     index index.html;
 

@@ -91,6 +91,7 @@ mkdir /mnt/var/www/storage
 mkdir /mnt/var/www/storage/codes
 mkdir /mnt/var/www/storage/profiles
 mkdir /mnt/data
+mkdir /mnt/static
 
 #获取数据库备份
 bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git /mnt/data/ && tar -xzvf postgres.tar.gz'
