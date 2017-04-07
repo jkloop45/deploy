@@ -66,6 +66,9 @@ git clone https://github.com/Gospely/webhook /var/www/gospely/webhook
 #modify the default workspace of nginx
 sed -i 's:usr/share/nginx/html:var/www/gospely/index:g' /etc/nginx/nginx.conf
 
+mkdir -p /mnt/etc/nginx/conf.d
+cp -f /root/gospely/deploy/conf/nginx.conf /etc/nginx/
+
 service nginx restart
 
 sh /root/gospely/deploy/docker_resize.sh

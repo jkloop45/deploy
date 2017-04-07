@@ -44,7 +44,7 @@ EOF
 
 sudo tee /etc/nginx/conf.d/ide.gospely.com.conf <<- 'EOF'
 upstream nodejs__upstream_gospely_ide {
-        server 127.0.0.1:9997;
+        server 127.0.0.1:9996;
         keepalive 64;
 }
 
