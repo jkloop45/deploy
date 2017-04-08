@@ -136,3 +136,6 @@ sh ~/gospely/deploy/dash/deploy.sh
 
 #官方镜像
 sh ~/gospely/deploy/initImages.sh
+
+#初始化论坛 
+sh ~/gospely/deploy/initbbs.sh
