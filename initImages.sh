@@ -71,6 +71,15 @@ docker pull registry.cn-hangzhou.aliyuncs.com/dodora/koa:mongodb1
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/koa:mongodb2
 docker pull registry.cn-hangzhou.aliyuncs.com/dodora/express:mongodb
 
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:2.7
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:3.0
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mariadb3
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mariadb2
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mongodb2
+docker pull registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mongodb3
+
+
+
 
 
 
@@ -145,6 +154,13 @@ docker tag registry.cn-hangzhou.aliyuncs.com/dodora/koa:mongodb2 gospel-koa-mong
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/express gospel-express
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/express:mariadb gospel-express-mariadb:latest
 docker tag registry.cn-hangzhou.aliyuncs.com/dodora/express:mongodb gospel-express-mongodb:latest
+
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:2.7 gospel-deubug-python:2.7
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:3.0 gospel-deubug-python:3.0
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mariadb2 gospel-deubug-python-maridb:2.7
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mongodb2 gospel-deubug-python-mongodb:2.7
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mariadb3 gospel-deubug-python-maridb:3.0
+docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mongodb3 gospel-deubug-python-mongodb:3.0
 
 
 docker rmi $(docker images |awk '/^registry*/ { print $3}')

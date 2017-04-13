@@ -14,3 +14,4 @@ docker start gospel-postgres
 docker start gospel_api
 docker start gospel_ide
 docker start gospel_dash
+docker start $(docker ps -a -q)
