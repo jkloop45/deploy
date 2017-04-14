@@ -20,4 +20,4 @@ RUN cnpm install -g supervisor
 # 修改时区
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-ENTRYPOINT cd /var/www/api && git pull && cnpm install pm2 -g &&  pm2 start index.js && /bin/bash && service ssh start
+ENTRYPOINT cd /var/www/api && git pull && cnpm install && supervisor --harmony index.js && /bin/bash && service ssh start
