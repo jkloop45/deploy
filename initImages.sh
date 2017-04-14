@@ -164,3 +164,4 @@ docker tag registry.cn-hangzhou.aliyuncs.com/dodora/debug-python:mongodb3 gospel
 
 
 docker rmi $(docker images |awk '/^registry*/ { print $3}')
+docker images -a | grep '<none>' | awk '{print $3}' | xargs sudo docker rmi -f
