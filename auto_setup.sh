@@ -8,10 +8,15 @@ sysctl -w fs.inotify.max_user_watches="99999999999"
 pm2 start /var/www/gospely/webhook/index.js
 service nginx start
 service docker start
+
+service xinetd start
+sh /mnt/static/vd/rsync.sh
 # 启动数据卷容器
 docker start $( docker ps -a | grep 'docker-volume-' | awk '{print $1}')
 docker start gospel-postgres
 docker start gospel_api
 docker start gospel_ide
 docker start gospel_dash
+docker start gospel_project_gospelblog_ivy
+docker start gospel_project_gospelbbs_ivy
 docker start $(docker ps -a -q)
