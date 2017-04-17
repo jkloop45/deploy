@@ -18,6 +18,10 @@ docker start gospel_ide
 docker start gospel_dash
 docker start gospel_project_gospelblog_ivy
 docker start gospel_project_gospelbbs_ivy
-docker start $(docker ps -a -q)
+#docker start $(docker ps -a -q)
+ docker start $(docker ps -a | grep 'wordpress' | awk '{print $1}')
+ docker start $(docker ps -a | grep 'phpwind' | awk '{print $1}')
+ docker start $(docker ps -a | grep 'discuz' | awk '{print $1}')
+ docker start $(docker ps -a | grep 'weiqing' | awk '{print $1}')
 
 sh /mnt/static/vd/rsync.sh
