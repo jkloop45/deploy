@@ -4,4 +4,4 @@
 20,40,59 * * * * curl -s "http://localhost:9999/schedules?token=gospelytokenaasss&operation=clearInnersession"
 10,20,30,40,50,59 * * * * docker rm -f $( docker stop $(docker ps -a | grep -v 'gospel' | awk '{print $1}'))
 1  3  * * * freshclam
-30 4  * * * clamscan  --infected  -r /  --remove -l /var/log/clamscan.log
+30 4  * * * clamscan  --infected  -r /  --remove -l /var/log/clamscan.log && echo $(date '+%Y%m%d %H:%M:%S') >> /var/log/clamscan.log
