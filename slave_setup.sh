@@ -20,7 +20,7 @@ EOF
 #配置docker rest api
 sudo tee /etc/systemd/system/docker.service <<- 'EOF'
 [Service]
-ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+ExecStart=/usr/bin/dockerd --storage-driver=devicemapper -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
 EOF
 
 sudo yum install docker-engine -y
@@ -117,7 +117,7 @@ sh ~/gospely/deploy/portsentry.sh
 rm -rf ~/.ssh/id_rsa
 docker pull registry.cn-hangzhou.aliyuncs.com/office/api
 docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
-docker run -itd -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api"  gospel_api
+docker run -itd --ulimit "nofile=204800:409600" -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api"  gospel_api
 cat /mnt/var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 #添加控制主机公钥和开发者公钥
