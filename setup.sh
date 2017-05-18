@@ -73,7 +73,7 @@ service nginx restart
 
 sh /root/gospely/deploy/docker_resize.sh
 
-git clone https://github.com/Gospely/deploy ~/gospely/deploy
+#git clone https://github.com/Gospely/deploy ~/gospely/deploy
 git clone https://github.com/Gospely/allocate.git ~/gospely/allocate
 
 cd ~/gospely/allocate
@@ -94,10 +94,10 @@ mkdir /mnt/data
 mkdir /mnt/static
 
 #获取数据库备份
-bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git /mnt/data/ && tar -xzvf postgres.tar.gz'
+# bash -c 'cd /mnt/data && git clone --depth=1 https://git.oschina.net/sharkseven/pg.git /mnt/data/ && tar -xzvf postgres.tar.gz'
 
 #创建数据库 redis
-docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
+docker run --name gospel-postgres -v /mnt/data/postgres/data:/var/lib/postgresql/data -e -p 5432:5432 POSTGRES_PASSWORD=dodoraCN2016@gospely -d postgres
 
 
 # 创建稀疏文件模板
@@ -115,27 +115,27 @@ sh ~/gospely/deploy/portsentry.sh
 
 # 部署api
 #依次构建
-rm -rf ~/.ssh/id_rsa
-docker pull registry.cn-hangzhou.aliyuncs.com/office/api
-docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
-docker run -itd --ulimit "nofile=204800:409600" -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-postgres:gospely.com gospel_api
-docker exec gospel_api ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+# rm -rf ~/.ssh/id_rsa
+# docker pull registry.cn-hangzhou.aliyuncs.com/office/api
+# docker tag registry.cn-hangzhou.aliyuncs.com/office/api gospel_api
+# docker run -itd --ulimit "nofile=204800:409600" -p 9999:8089 -v /mnt/var/www/storage:/var/www/storage -w /var/www/api -v /mnt/var/www/ssh:/root/.ssh -v /mnt/var/www/storage/codes/temp:/var/www/api/uploads --name="gospel_api" --link gospel-postgres:gospely.com gospel_api
+# docker exec gospel_api ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 cat /mnt/var/www/ssh/id_rsa.pub >> /root/.ssh/authorized_keys
-
-#设置开机自动执行脚本
-
+#
+# #设置开机自动执行脚本
+#
 echo /etc/rc.d/rc.local >> sh ~/gospely/deploy/auto_setup.sh
 
 # 设置定时任务
 crontab /root/gospely/deploy/schedules.cron
-
-#依次构建
-sh ~/gospely/deploy/admin/deploy.sh
-#sh ~/gospely/deploy/api/deploy.sh
-sh ~/gospely/deploy/dash/deploy.sh
-
-#官方镜像
-sh ~/gospely/deploy/initImages.sh
+#
+# #依次构建
+# sh ~/gospely/deploy/admin/deploy.sh
+# #sh ~/gospely/deploy/api/deploy.sh
+# sh ~/gospely/deploy/dash/deploy.sh
+#
+# #官方镜像
+# sh ~/gospely/deploy/initImages.sh
 
 #初始化论坛
 sh ~/gospely/deploy/initbbs.sh
